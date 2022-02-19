@@ -34,7 +34,7 @@ class Userprovider extends ChangeNotifier{
     }
   }
 
-  Future<void> getuserRepo({String? username,BuildContext? context) async{
+  Future<void> getuserRepo({String? username,BuildContext? context}) async{
     setLoading(true);
     try {
          //_repo=await _githubapi.getUserRepos(username: username
