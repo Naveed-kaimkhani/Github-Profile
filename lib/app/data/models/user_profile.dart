@@ -1,15 +1,17 @@
-import 'package:flutter/material.dart';
 
 class user_profile{
-  String? name, avatar_url,bio;
-  int? followers,following;
+  String name="";
+  String avatar_url="";
+  String bio="";
+  int followers=0;
+  int following=0;
 
   user_profile({
-    this.name,
-    this.avatar_url,
-    this.bio,
-    this.followers,
-    this.following});
+    required this.name,
+   required this.avatar_url,
+   required this.bio,
+   required this.followers,
+   required this.following});
 
     user_profile.fromjson(Map<String,dynamic> json){
       this.name=json['name'];

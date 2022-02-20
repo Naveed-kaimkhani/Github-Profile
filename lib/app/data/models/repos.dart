@@ -1,6 +1,5 @@
 import 'package:easy_github/app/data/Endpoints.dart';
 import 'package:easy_github/app/data/dioclient.dart';
-import 'package:easy_github/app/data/models/user_profile.dart';
 
 class repos{
   String? name,html_url;

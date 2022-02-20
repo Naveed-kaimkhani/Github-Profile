@@ -11,11 +11,12 @@ class Homepage extends StatelessWidget {
 final TextEditingController _controller=TextEditingController();
   
     Future<void> FetchUserInfo()async{
-      print(_controller.text);
-      await context.read<Userprovider>().getuser(username: _controller.text);
-      
+      //print(_controller.text);
+      await context.read<Userprovider>().getuser(username: _controller.text);                         //context pass nh kya
+        await context.read<Userprovider>().getuserRepo(username: _controller.text,context: context);
         print("in fetch user info func");
-}
+} 
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(

@@ -1,6 +1,6 @@
 import 'package:easy_github/app/data/models/repos.dart';
-import 'package:easy_github/app/data/models/repos.dart';
 import 'package:easy_github/app/data/models/user_profile.dart';
+import 'package:easy_github/app/routes/AppRoutes.dart';
 import 'package:easy_github/app/services.dart/GithubApi.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -34,12 +34,14 @@ class Userprovider extends ChangeNotifier{
     }
   }
 
-  Future<void> getuserRepo({String? username,BuildContext? context}) async{
+  Future<void> getuserRepo({String? username,required BuildContext context}) async{
     setLoading(true);
     try {
          //_repo=await _githubapi.getUserRepos(username: username
       final List<repos?> response=await _githubapi.getUserRepos(username: username);
       _repo=response;
+     
+      Navigator.of(context).pushNamed(AppRoutes.user_details);
     } catch (e) {
       print(e);
       setLoading(false);

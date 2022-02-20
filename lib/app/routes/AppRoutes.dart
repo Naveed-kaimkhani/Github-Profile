@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 class AppRoutes{
   static const String home='/';
   static const String user_details='/userDetails';
+  static const String webview='/webview';
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings){
     switch (settings.name) {
