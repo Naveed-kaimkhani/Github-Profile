@@ -1,3 +1,5 @@
+import 'package:dio/dio.dart';
+import 'package:easy_github/app/data/Exceptions.dart';
 import 'package:easy_github/app/data/models/repos.dart';
 import 'package:easy_github/app/data/models/user_profile.dart';
 import 'package:easy_github/app/routes/AppRoutes.dart';
@@ -42,8 +44,10 @@ class Userprovider extends ChangeNotifier{
       _repo=response;
      
       Navigator.of(context).pushNamed(AppRoutes.user_details);
-    } catch (e) {
-      print(e);
+    } 
+    
+    catch (e) {
+      //print(e);
       setLoading(false);
     }
   }

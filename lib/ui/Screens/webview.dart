@@ -12,12 +12,14 @@ class webview extends StatefulWidget {
 class _webviewState extends State<webview> {
  @override
  void initState() {
-   super.initState();
    print("In init");
+   super.initState();
+   
    if(Platform.isAndroid) WebView.platform=SurfaceAndroidWebView();
  }
   @override
   Widget build(BuildContext context) {
+    print("build me");
    final repourl=ModalRoute.of(context)!.settings.arguments as String?;
     print("in build");
     return WebView(
