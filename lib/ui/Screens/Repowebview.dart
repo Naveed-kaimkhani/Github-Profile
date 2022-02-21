@@ -2,14 +2,14 @@
 import 'dart:io' ;
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-class webview extends StatefulWidget {
-  const webview({ Key? key }) : super(key: key);
+class Repowebview extends StatefulWidget {
+  const Repowebview({ Key? key }) : super(key: key);
 
   @override
   _webviewState createState() => _webviewState();
 }
 
-class _webviewState extends State<webview> {
+class _webviewState extends State<Repowebview> {
  @override
  void initState() {
    print("In init");

@@ -57,8 +57,13 @@ class userDetails extends StatelessWidget {
               mainAxisSpacing: 10,
               children: reposInfo.map((item) => GestureDetector(
                 onTap: (){
+                  print("hiiiiiii");
                   print(item!.html_url);
-                  Navigator.of(context).pushNamed(AppRoutes.webview,arguments: item!.html_url);},
+                  print("heeee");
+                  Navigator.of(context).pushNamed(AppRoutes.Repo_webview,arguments: item!.html_url);
+                  print("haaaa");
+                  },
+                  
                 child: Container(     
                     decoration: BoxDecoration(
                       border: Border.all(
