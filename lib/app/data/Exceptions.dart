@@ -16,8 +16,8 @@ class DioExceptions implements Exception {
         message = "Receive timeout in connection with API server";
         break;
       case DioErrorType.response:
-        message =
-            _handleError(dioError.response!.statusCode, dioError.response!.data);
+        message = _handleError(
+            dioError.response!.statusCode, dioError.response!.data);
         break;
       case DioErrorType.sendTimeout:
         message = "Send timeout in connection with API server";
@@ -28,7 +28,7 @@ class DioExceptions implements Exception {
     }
   }
 
-  String message="";
+  String message = "";
 
   String _handleError(int? statusCode, dynamic error) {
     switch (statusCode) {
