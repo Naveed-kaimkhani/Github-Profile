@@ -64,7 +64,7 @@ class Homepage extends StatelessWidget {
                 child: ElevatedButton(
                     onPressed: () => FetchUserInfo(),
                     child: Text(
-                      "Get my protfile",
+                      "Get protfile",
                       style: TextStyle(fontSize: 17),
                     )),
               )

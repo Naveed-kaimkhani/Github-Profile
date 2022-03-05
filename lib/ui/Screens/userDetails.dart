@@ -18,7 +18,7 @@ class userDetails extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 50,
+              height: 55,
             ),
             ListTile(
               isThreeLine: true,
@@ -26,9 +26,9 @@ class userDetails extends StatelessWidget {
                 backgroundImage: NetworkImage(userinfo!.avatar_url),
               ),
               title: Text(
-                userinfo!.name,
+                userinfo.name,
                 style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold,fontSize: 30),
               ),
               subtitle: Text(
                 userinfo.bio,
@@ -50,14 +50,15 @@ class userDetails extends StatelessWidget {
                     width: 10,
                   ),
                   Text(
-                    userinfo.followers.toString(),
+                  "Followers:"+userinfo.followers.toString(),
                     style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   Text(
-                    userinfo.following.toString(),
+
+                    "Following:"+userinfo.following.toString(),
                     style: TextStyle(color: Colors.white),
                   ),
                 ],
