@@ -27,8 +27,10 @@ class userDetails extends StatelessWidget {
               ),
               title: Text(
                 userinfo.name,
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold,fontSize: 30),
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
               ),
               subtitle: Text(
                 userinfo.bio,
@@ -50,22 +52,21 @@ class userDetails extends StatelessWidget {
                     width: 10,
                   ),
                   Text(
-                  "Followers:"+userinfo.followers.toString(),
+                    "Followers " + userinfo.followers.toString(),
                     style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   Text(
-
-                    "Following:"+userinfo.following.toString(),
+                    "Following " + userinfo.following.toString(),
                     style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 6.0),
@@ -75,7 +76,7 @@ class userDetails extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 0,
             ),
             Expanded(
               child: GridView.count(
@@ -99,11 +100,13 @@ class userDetails extends StatelessWidget {
                             ),
                             child: Card(
                               color: Colors.black,
-                              child: Text(
-                                item?.name ?? "User name is null",
-                                style: TextStyle(color: Colors.white),
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
+                              child: Center(
+                                child: Text(
+                                  item?.name ?? "Repo name is null",
+                                  style: TextStyle(color: Colors.white),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
                               ),
                             ),
                           ),
